@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maya-style Landing Page</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --clr-bg:#0A0A0A;
+      --clr-card:#121212;
+      --clr-text:#FFFFFF;
+      --clr-accent:#39FF14;
+      --clr-muted:#B8B8B8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--clr-bg);color:var(--clr-text);line-height:1.55;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;object-fit:cover}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;
+        padding:1rem 7vw;background:rgba(10,10,10,.9);backdrop-filter:blur(6px);}
+    .logo{font-size:1.6rem;font-weight:800;}
+    .nav-links{display:flex;gap:2rem;font-weight:600;}
+    .btn{padding:.75rem 1.6rem;border-radius:50px;font-weight:600;transition:transform .2s;}
+    .btn-primary{background:var(--clr-accent);color:#000;}
+    .btn-outline{border:2px solid var(--clr-accent);color:var(--clr-accent);}
+    .btn:hover{transform:translateY(-3px);}
+
+    /* HERO */
+    header{display:grid;gap:3rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+           align-items:center;min-height:90vh;padding:0 7vw;background:linear-gradient(145deg,#000 0%,#001600 100%);}
+    header h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.15;}
+    header p{max-width:50ch;margin-top:1rem;color:var(--clr-muted);}
+    .cta-group{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+    .hero-img img{border-radius:24px;box-shadow:0 0 40px #000;}
+
+    /* FEATURES */
+    .features{padding:4rem 7vw;background:var(--clr-card);display:grid;gap:3rem;
+              grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));}
+    .feature{background:#181818;padding:2rem;border-radius:16px;text-align:center;transition:transform .2s;}
+    .feature:hover{transform:translateY(-6px);}
+    .feature img{width:80px;margin:0 auto;}
+    .feature h3{margin-top:1rem;font-size:1.25rem;font-weight:600}
+    .feature p{color:var(--clr-muted);font-size:.95rem;margin-top:.5rem;}
+
+    /* HOW IT WORKS */
+    .hiw{padding:4rem 7vw;text-align:center}
+    .hiw-steps{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:3rem}
+    .step img{border-radius:12px;margin-bottom:1rem;}
+    .step h4{margin-bottom:.5rem;}
+
+    /* SECURITY */
+    .security{padding:4rem 7vw;background:#0F0F0F;display:flex;flex-wrap:wrap;gap:3rem;align-items:center;}
+    .security img{flex:1 1 300px;border-radius:16px;}
+    .security-content{flex:1 1 320px;}
+    .security-content h2{font-size:2rem;margin-bottom:1rem;}
+
+    /* TESTIMONIALS */
+    .testimonials{padding:4rem 7vw;text-align:center}
+    .test-grid{display:flex;gap:2rem;overflow-x:auto;padding-bottom:1rem;}
+    .testimonial{background:#181818;padding:2rem;border-radius:16px;min-width:260px;flex:0 0 auto;}
+    .testimonial img{width:60px;height:60px;border-radius:50%;margin:0 auto 1rem}
+
+    /* FAQ */
+    .faq{padding:4rem 7vw;background:var(--clr-card);}
+    .faq h2{text-align:center;margin-bottom:2rem;font-size:2rem;}
+    details{background:#181818;border-radius:12px;padding:1.2rem;margin-bottom:1rem;}
+    summary{cursor:pointer;font-weight:600;margin-bottom:.5rem;}
+
+    /* TRUST & FOOTER */
+    .trust{padding:3rem 7vw;text-align:center}
+    .logos{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;opacity:.8;}
+    footer{background:#000;padding:3rem 7vw;text-align:center;font-size:.9rem;color:var(--clr-muted);}
+    footer img{height:32px;margin-bottom:1rem}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">maya<span style="color:var(--clr-accent);">.</span></div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#hiw">How&nbsp;It&nbsp;Works</a>
+      <a href="#security">Security</a>
+      <a href="#download">Download</a>
+    </div>
+    <a class="btn btn-primary" href="#download">Download&nbsp;App</a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top">
+    <div>
+      <h1>Get banked.<br>Your money. Your way.</h1>
+      <p>The all-in-one digital bank built for faster savings, smarter spending, and effortless rewards.</p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="#download">Download&nbsp;Now</a>
+        <a class="btn btn-outline" href="#features">Explore&nbsp;Features</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <!-- Unsplash dynamic phone/fintech photo -->
+      <img src="https://www.maya.ph/hubfs/Maya/Maya_App_Screen_lm2.png" alt="Maya app on a smartphone">
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="QR code icon">
+      <h3>Send & Receive</h3>
+      <p>Instant transfers via QR code, phone number, or @username.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/3581/3581345.png" alt="Piggy bank icon">
+      <h3>Savings up to 15 % p.a.</h3>
+      <p>Grow your money in a fully insured digital savings account.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1963/1963562.png" alt="Credit card icon">
+      <h3>Credit in Seconds</h3>
+      <p>Get approved for up to ₱30 k credit line—no paperwork needed.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="hiw" class="hiw">
+    <h2>How It Works</h2>
+    <div class="hiw-steps">
+      <div class="step">
+        <img src="https://www.maya.ph/hs-fs/hubfs/Maya/Maya%20Project%20Hope/Send.png?width=300&height=300&name=Send.png" alt="">
+        <h4>1&nbsp;&nbsp;Create an account</h4>
+        <p>Download the app and sign up with one valid ID.</p>
+      </div>
+      <div class="step">
+        <img src="https://www.maya.ph/hubfs/Maya/Maya%20Project%20Hope/High%20interest.png" alt="">
+        <h4>2&nbsp;&nbsp;Add money</h4>
+        <p>Top-up via bank transfer, debit card, or 90 k+ cash-in points.</p>
+      </div>
+      <div class="step">
+        <img src="https://www.maya.ph/hs-fs/hubfs/Maya/Maya%20Project%20Hope/Safe%20and%20secure.png?width=300&name=Safe%20and%20secure.png" alt="">
+        <h4>3&nbsp;&nbsp;Save & earn</h4>
+        <p>Move funds to Savings and enjoy industry-leading interest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section id="security" class="security">
+    <img src="https://www.maya.ph/hubfs/Maya/icons/Frame%2018966%20(1).png" alt="Cyber-lock illustration">
+    <div class="security-content">
+      <h2>Your money is fortress-level safe</h2>
+      <ul>
+        <li>Bangko Sentral-regulated digital bank</li>
+        <li>256-bit end-to-end encryption</li>
+        <li>Biometric login & dynamic CVV</li>
+        <li>₱500 k PDIC deposit insurance</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>Loved by millions</h2>
+    <div class="test-grid">
+      <div class="testimonial">
+        <img src="https://source.unsplash.com/60x60/?person,smile" alt="">
+        <p>“Switched from my old bank and never looked back—instant transfers and 10 % interest are unbeatable.”</p>
+        <span>— Alex, Cebu City</span>
+      </div>
+      <div class="testimonial">
+        <img src="https://source.unsplash.com/60x60/?woman,smiling" alt="">
+        <p>“The credit line saved my small biz. Approval took literally one minute.”</p>
+        <span>— Jessa, Davao</span>
+      </div>
+      <div class="testimonial">
+        <img src="https://source.unsplash.com/60x60/?man,portrait" alt="">
+        <p>“I earn rewards every time I pay bills—getting paid to adult is great!”</p>
+        <span>— Miguel, Quezon City</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>Is Maya really a bank?</summary>
+      <p>Yes—Maya Bank, Inc. is a BSP-licensed digital bank and deposits are insured by PDIC up to ₱500 k.</p>
+    </details>
+    <details>
+      <summary>Who can open an account?</summary>
+      <p>Philippine residents aged 18+ with one valid government ID.</p>
+    </details>
+    <details>
+      <summary>How do I cash-in?</summary>
+      <p>Via InstaPay, PESONet, over-the-counter partners, or debit/credit card.</p>
+    </details>
+    <details>
+      <summary>Are there fees?</summary>
+      <p>Savings and transfers to other Maya users are free. InstaPay/PESONet fees apply for some banks.</p>
+    </details>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust">
+    <h2>Backed by industry leaders</h2>
+    <div class="logos">
+      <img src="https://brandlogos.net/wp-content/uploads/2021/11/apple-logo.png" alt="Apple logo">
+      <img src="https://brandlogos.net/wp-content/uploads/2021/11/google-logo.png" alt="Google logo">
+      <img src="https://brandlogos.net/wp-content/uploads/2021/11/google-logo.png" alt="Mastercard logo">
+      <img src="https://brandlogos.net/wp-content/uploads/2021/11/visa-logo.png" alt="Visa logo">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="download">
+    <img src="https://www.maya.ph/hubfs/Maya/money-green.svg" alt="Maya logo">
+    <p>&copy; 2025 Maya-style Landing. All rights reserved.</p>
+    <p><a href="#">Privacy&nbsp;Policy</a> · <a href="#">Terms&nbsp;of&nbsp;Use</a></p>
+  </footer>
+</body>
+</html>
