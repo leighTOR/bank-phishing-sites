@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BDO Online — Bank Anytime</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- WOW.js for scroll animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new WOW().init();
+    });
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Navbar -->
+  <header class="wow animate__fadeInDown backdrop-blur bg-white/75 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/news-special1/lifestyle/6/30/bdo-logo.jpg"
+             alt="BDO Logo" class="h-8 w-auto">
+        <span class="text-2xl font-bold text-blue-800">BDO Online</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 items-center text-sm">
+        <a href="#" class="hover:text-blue-600 focus:outline-none focus:text-blue-600">Home</a>
+        <a href="#features" class="hover:text-blue-600 focus:outline-none focus:text-blue-600">Features</a>
+        <a href="#partners" class="hover:text-blue-600 focus:outline-none focus:text-blue-600">Partners</a>
+        <a href="#faq" class="hover:text-blue-600 focus:outline-none focus:text-blue-600">FAQs</a>
+        <a href="#contact" class="hover:text-blue-600 focus:outline-none focus:text-blue-600">Contact</a>
+        <a href="index.html"
+           class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Log in
+        </a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur">
+      <ul class="px-6 pb-4 space-y-3">
+        <li><a href="#" class="block hover:text-blue-600">Home</a></li>
+        <li><a href="#features" class="block hover:text-blue-600">Features</a></li>
+        <li><a href="#partners" class="block hover:text-blue-600">Partners</a></li>
+        <li><a href="#faq" class="block hover:text-blue-600">FAQs</a></li>
+        <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+        <li>
+          <a href="index.html"
+             class="block bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700">
+            Log in
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="wow animate__animated animate__fadeInUp bg-gradient-to-r from-blue-50 to-white py-20">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2">
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-blue-900 mb-4">
+          Bank Anytime, Anywhere
+        </h1>
+        <p class="text-lg text-gray-700 mb-6">
+          Experience the convenience of BDO Online—manage accounts, pay bills, transfer funds, and more from your device.
+        </p>
+        <div class="flex gap-4">
+          <a href="index.html"
+             class="wow animate__animated animate__zoomIn bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700">
+            Get Started
+          </a>
+          <a href="#download"
+             class="wow animate__animated animate__zoomIn animate__delay-1s inline-flex items-center text-blue-600 hover:text-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor"
+                 viewBox="0 0 20 20">
+              <path d="M4 3h12a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm4 3v4h4V6H8z" />
+            </svg>
+            Download App
+          </a>
+        </div>
+      </div>
+      <div class="lg:w-1/2 wow animate__animated animate__fadeInRight">
+        <img src="https://cdn.dribbble.com/users/4822804/screenshots/10968131/media/e6cb6524d9c810b27d4d44b3cb3ee388.png"
+             alt="Online banking on mobile" class="w-full rounded-xl shadow-lg transition-transform hover:scale-105">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="wow animate__fadeInUp py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">What You Can Do</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-10">
+        <div class="wow animate__animated animate__fadeInUp animate__delay-1s bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <img src="https://www.bdo.com.ph/content/dam/bdounibank/en-ph/cbg-digital-marketing/digital/bdo-online/images/bio.png" alt="" class="h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">24/7 Access</h3>
+          <p class="text-gray-600">
+            Check balances, transfer funds, and review history at any hour—with full security.
+          </p>
+        </div>
+        <div class="wow animate__animated animate__fadeInUp animate__delay-2s bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <img src="https://www.bdo.com.ph/content/dam/bdounibank/en-ph/cbg-digital-marketing/digital/bdo-online/images/2025/february-2025-updates/features/illus_card-lock.png" alt="" class="h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Bills Payment</h3>
+          <p class="text-gray-600">
+            Pay utilities, loans, and more in seconds—no branch visit required.
+          </p>
+        </div>
+        <div class="wow animate__animated animate__fadeInUp animate__delay-3s bg-white p-6 rounded-lg shadow hover:shadow-lg">
+          <img src="https://www.bdo.com.ph/content/dam/bdounibank/en-ph/cbg-digital-marketing/digital/bdo-online/images/2025/february-2025-updates/features/illus_send_money.png" alt="" class="h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Secure Banking</h3>
+          <p class="text-gray-600">
+            Bank-level encryption &amp; multi-factor authentication keep you safe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="wow animate__fadeInUp py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-gray-700 mb-8">Trusted By</h2>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <img src="https://cdn.prod.website-files.com/6385b55675a0bd614777a5c1/65e5883d9743dee8dd5caec4_Accenture.webp" alt="Company 1" class="h-12">
+        <img src="https://cdn.prod.website-files.com/6385b55675a0bd614777a5c1/65e5883d9743dee8dd5caef9_Foodpanda-p-500.avif" alt="Company 2" class="h-12">
+        <img src="https://cdn.prod.website-files.com/6385b55675a0bd614777a5c1/65e5883d9743dee8dd5caede_HSBC-1.webp" alt="Company 3" class="h-12">
+        <img src="https://cdn.prod.website-files.com/6385b55675a0bd614777a5c1/65e5883d9743dee8dd5caec2_Pay_Go%20-%20Transparent%20BG%20Low%20Res.webp" alt="Company 4" class="h-12">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="wow animate__fadeInUp bg-blue-50 py-16">
+    <div class="max-w-3xl mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold text-blue-800 mb-10">What Our Clients Say</h2>
+      <div id="testimonial" class="relative">
+        <p id="testimonial-text"
+           class="text-xl italic text-gray-700 transition-opacity duration-500">"BDO Online makes my life so much easier. I can manage my finances in just a few clicks!"</p>
+        <h4 id="testimonial-author" class="mt-4 font-semibold text-blue-700">— Ana, Small Business Owner</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Download -->
+  <section id="download" class="wow animate__fadeInUp py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6">Get the BDO App</h2>
+      <p class="text-gray-700 mb-8">Your banking, now in your pocket. Download on iOS or Android today.</p>
+      <div class="flex justify-center gap-6">
+        <a href="#" class="inline-block transform hover:scale-105">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+               alt="Download on the App Store" class="h-12">
+        </a>
+        <a href="#" class="inline-block transform hover:scale-105">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+               alt="Get it on Google Play" class="h-12">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="wow animate__fadeInUp py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-800 mb-10 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <details class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg">
+          <summary class="font-semibold cursor-pointer text-blue-700">How do I enroll in BDO Online?</summary>
+          <p class="mt-2 text-gray-600">
+            Click “Get Started” and follow the step-by-step instructions using your existing BDO account details.
+          </p>
+        </details>
+        <details class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg">
+          <summary class="font-semibold cursor-pointer text-blue-700">Is BDO Online safe?</summary>
+          <p class="mt-2 text-gray-600">
+            Absolutely—your data is protected with bank-grade encryption and OTP verification on every login.
+          </p>
+        </details>
+        <details class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg">
+          <summary class="font-semibold cursor-pointer text-blue-700">What can I do with BDO Online?</summary>
+          <p class="mt-2 text-gray-600">
+            Pay bills, transfer funds, check balances, set up recurring payments, and more—all online.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="wow animate__fadeInUp py-16 bg-blue-600 text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-4">Stay in the Loop</h2>
+      <p class="mb-6">Subscribe for updates, tips, and exclusive offers from BDO Online.</p>
+      <form class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" required
+               class="w-full sm:w-auto flex-1 px-4 py-2 rounded-md text-gray-800 focus:ring-2 focus:ring-white"
+               placeholder="Your email address">
+        <button type="submit"
+                class="bg-white text-blue-600 px-6 py-2 rounded-md hover:bg-gray-100">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="wow animate__fadeInUp py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-800 mb-10 text-center">Get in Touch</h2>
+      <form class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-2 font-medium">Name</label>
+          <input type="text" required
+                 class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-blue-400"
+                 placeholder="Your name">
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Email</label>
+          <input type="email" required
+                 class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-blue-400"
+                 placeholder="you@example.com">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block mb-2 font-medium">Message</label>
+          <textarea required
+                    class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-blue-400"
+                    rows="4" placeholder="Your message..."></textarea>
+        </div>
+        <div class="sm:col-span-2 text-center">
+          <button type="submit"
+                  class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="wow animate__fadeInUp bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-semibold mb-4 text-white">BDO Online</h3>
+        <p>© 2025 BDO Online. All rights reserved.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white">Help Center</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4 text-white">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" aria-label="Facebook" class="hover:text-white">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12…"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="hover:text-white">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 4.…"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-white">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2.…"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Testimonials rotation (unchanged)
+    const testimonials = [
+      { text: '"BDO Online makes my life so much easier. I can manage my finances in just a few clicks!"', author: '— Ana, Small Business Owner' },
+      { text: '"Very secure and reliable. I trust BDO for all my banking needs."', author: '— Carlo, IT Professional' },
+      { text: '"I pay my bills and send money to family without going out. BDO is the best."', author: '— Maria, OFW' },
+    ];
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % testimonials.length;
+      const txt = document.getElementById('testimonial-text');
+      txt.classList.add('opacity-0');
+      setTimeout(() => {
+        txt.textContent = testimonials[idx].text;
+        document.getElementById('testimonial-author').textContent = testimonials[idx].author;
+        txt.classList.remove('opacity-0');
+      }, 500);
+    }, 5000);
+  </script>
+
+</body>
+</html>

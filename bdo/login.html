@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BDO Online Login</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css for page fade-in -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    /* Floating label support */
+    .form-floating:has(input:focus:not(:placeholder-shown)) label,
+    .form-floating:has(input:not(:placeholder-shown)) label {
+      @apply -top-2.5 text-xs text-blue-600 bg-white px-1;
+    }
+    .form-floating label {
+      @apply absolute left-3 top-3 text-gray-500 pointer-events-none transition-all duration-200 ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans animate__animated animate__fadeIn">
+
+  <div class="min-h-screen flex flex-col lg:flex-row">
+    <!-- left illustration -->
+    <div class="lg:flex-1 bg-gradient-to-br from-blue-100 to-white flex items-center justify-center p-6">
+      <img
+        src="https://www.bdo.com.ph/content/dam/bdounibank/en-ph/cbg-digital-marketing/digital/app-diff/NewWeb_Online_Hero-2-rev1.png"
+        alt="BDO Online Illustration"
+        class="max-w-md w-full object-cover animate__animated animate__zoomIn"
+      />
+    </div>
+
+    <!-- right login form -->
+    <div class="lg:flex-1 flex items-center justify-center p-6">
+      <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg space-y-6">
+        <!-- Logo & Heading -->
+        <h1 class="text-4xl font-bold">
+          <span class="text-blue-700">BD</span><span class="text-yellow-400">O</span> Online
+        </h1>
+        <h2 class="text-xl text-gray-700">Welcome back!</h2>
+
+        <!-- Form -->
+        <!-- ✅ Redirects to bdo-landing.html on submit -->
+        <form class="space-y-6" action="index.html" method="GET">
+          <!-- Username -->
+          <div class="relative form-floating">
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder=" "
+              autocomplete="username"
+              class="w-full px-3 pt-5 pb-2 border border-gray-300 rounded focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition"
+            />
+            <label for="username">Username</label>
+          </div>
+
+          <!-- Password -->
+          <div class="relative form-floating">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder=" "
+              autocomplete="current-password"
+              class="w-full px-3 pt-5 pb-2 border border-gray-300 rounded focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition"
+            />
+            <label for="password">Password</label>
+            <button
+              type="button"
+              aria-label="Toggle password visibility"
+              onclick="togglePassword()"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 transition"
+            >
+              <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <path id="eye-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path id="eye-open-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200 transition"
+          >
+            Log in
+          </button>
+        </form>
+
+        <hr class="border-gray-200" />
+
+        <!-- Links -->
+        <p class="text-sm text-gray-600">
+          Don’t have Online Banking yet?
+          <a href="#" class="text-blue-600 font-medium hover:underline">Sign up</a>
+        </p>
+        <p class="text-sm text-gray-600">
+          Need help?
+          <a href="#" class="text-blue-600 hover:underline">Get username</a> •
+          <a href="#" class="text-blue-600 hover:underline">Reset password</a>
+        </p>
+        <p class="text-xs text-gray-500">
+          Need more info? <a href="#" class="underline">Go here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById('password');
+      const icon = document.getElementById('eye-icon');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        icon.innerHTML = `
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.269-2.943-9.543-7a10.05 10.05 0 011.656-3.045m2.213-2.212A9.97 9.97 0 0112 5c4.478 0 8.269 2.943 9.543 7a10.05 10.05 0 01-.755 1.664M15 12a3 3 0 11-6 0 3 3 0 016 0z" />`;
+      } else {
+        pwd.type = 'password';
+        icon.innerHTML = `
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z"/>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
