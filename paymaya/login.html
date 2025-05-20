@@ -1,0 +1,109 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Maya-style</title>
+
+  <!-- Google Font → same as landing page -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --clr-bg:#0A0A0A;
+      --clr-card:#121212;
+      --clr-text:#FFFFFF;
+      --clr-accent:#39FF14;
+      --clr-muted:#B8B8B8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--clr-bg);
+      color:var(--clr-text);
+      display:grid;min-height:100vh;place-items:center;
+    }
+    .card{
+      background:var(--clr-card);
+      padding:3rem 2.5rem;
+      border-radius:20px;
+      width:min(420px,90vw);
+      box-shadow:0 0 40px #000;
+    }
+
+    h1{font-size:1.75rem;font-weight:800;margin-bottom:2rem;text-align:center;}
+
+    label{display:block;font-weight:600;margin-bottom:.5rem;}
+
+    input{
+      width:100%;padding:.85rem 1rem;margin-bottom:1.5rem;
+      border:2px solid #222;border-radius:12px;font-size:1rem;
+      background:#181818;color:var(--clr-text);
+      transition:border .2s;
+    }
+    input:focus{outline:none;border-color:var(--clr-accent);}
+
+    .btn{
+      width:100%;padding:1rem 1rem;border:none;
+      border-radius:50px;font-weight:600;
+      background:var(--clr-accent);color:#000;
+      cursor:pointer;font-size:1rem;transition:transform .2s;
+    }
+    .btn:hover{transform:translateY(-3px);}
+    .msg{color:var(--clr-muted);font-size:.85rem;margin-top:1rem;text-align:center;}
+
+    /* small help link */
+    .help{display:block;margin-top:1rem;text-align:center;font-size:.85rem;}
+    .help a{color:var(--clr-accent);}
+  </style>
+</head>
+<body>
+
+  <form class="card" id="loginForm" novalidate>
+    <h1>Welcome back</h1>
+
+    <label for="email">Email</label>
+    <input  id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="username"
+            placeholder="you@example.com"
+            required>
+
+    <label for="password">Password</label>
+    <input  id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            minlength="6"
+            required>
+
+    <button type="submit" class="btn">Log in</button>
+
+    <span class="msg" id="msg" aria-live="polite"></span>
+
+    <span class="help"><a href="#">Forgot your password?</a></span>
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const msg  = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault(); // stay on page
+      const email = form.email.value.trim();
+      const pwd   = form.password.value.trim();
+
+      if(!email || !pwd){
+        msg.textContent = 'Please enter both email and password';
+        return;
+      }
+      // Optionally you could POST via fetch() here
+
+      // Simple redirect to landing page
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
