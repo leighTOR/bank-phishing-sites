@@ -1,0 +1,67 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BPI Login Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- optional: include a web-safe font or Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="container">
+    <!-- LEFT PANEL -->
+    <aside class="sidebar">
+      <div class="logo">BPI</div>
+      <h1>Welcome!</h1>
+      <form class="login-form">
+        <div class="form-group">
+          <input type="text" placeholder="Username" required>
+        </div>
+        <div class="form-group password-group">
+          <input type="password" placeholder="Password" required>
+          <span class="eye-icon">👁️</span>
+        </div>
+        <button type="submit" class="btn login-btn">Log in</button>
+        <p class="help-links">
+          <a href="#">Forgot username</a> or <a href="#">password</a>
+        </p>
+      </form>
+      <div class="divider"><span>OR</span></div>
+      <button class="btn register-btn">Register now</button>
+      <details class="more-info">
+        <summary>Show inquiries and other services</summary>
+        <p>Deposits are insured by PDIC up to ₱1 Million per depositor.</p>
+        <p>For inquiries and comments please <a href="#">send us a message</a> or call our 24-hour BPI Contact Center at (+632) 889-10000.</p>
+        <p>BPI is a proud member of BancNet. BPI is regulated by the Bangko Sentral ng Pilipinas. <a href="https://www.bsp.gov.ph">https://www.bsp.gov.ph</a></p>
+        <p class="copyright">Copyright © 2023 BPI. All rights reserved.</p>
+      </details>
+      <nav class="footer-nav">
+        <a href="#">Service Agreement</a>
+        <a href="#">Learn About Security</a>
+      </nav>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <main class="illustration-panel">
+      <nav class="top-nav">
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+      <div class="graphic">
+        <img src="illustration.png" alt="Illustration">
+      </div>
+      <div class="brand-logos">
+        <img src="globalsign.png" alt="Secure GlobalSign">
+        <img src="bancnet.png"   alt="Proud member of BancNet">
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+
