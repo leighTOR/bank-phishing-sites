@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coins.ph Login Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="flex flex-col md:flex-row w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Left Section (With Background Image) -->
+        <div class="md:w-1/2 bg-[url('hero.jpg')] bg-cover bg-center p-8 flex items-center justify-center relative">
+            <!-- Optional overlay for better text readability -->
+            <div class="absolute inset-0 bg-blue-900 opacity-50"></div>
+        </div>
+
+        <!-- Right Section (Login Form) -->
+        <div class="md:w-1/2 p-8">
+            <!-- Logo -->
+            <div class="flex items-center mb-6">
+                <img src="coinsph.png" alt="Coins.ph Logo" class="h-10 w-10 mr-2" />
+                <span class="text-2xl font-bold text-blue-900">coins.ph</span>
+            </div>
+
+            <!-- Form Header -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Login to your account</h2>
+            <p class="text-sm text-gray-600 mb-6">
+                No account yet? <a href="#" class="text-blue-600 hover:underline">Create an account.</a>
+            </p>
+
+            <!-- Tabs -->
+            <div class="flex border-b border-gray-200 mb-6">
+                <button id="phoneTab" onclick="switchTab('phone')" class="py-2 px-4 text-blue-600 border-b-2 border-blue-600 font-medium">Phone</button>
+                <button id="emailTab" onclick="switchTab('email')" class="py-2 px-4 text-gray-500 font-medium">Email</button>
+            </div>
+
+            <!-- Form -->
+            <form id="loginForm" onsubmit="handleSubmit(event)" class="space-y-6">
+                <!-- Phone Input -->
+                <div id="phoneInput" class="mb-6">
+                    <div class="flex items-center border border-gray-300 rounded-lg">
+                        <div class="flex items-center px-3 border-r border-gray-300">
+                            <img src="https://flagcdn.com/16x12/ph.png" alt="Philippines Flag" class="mr-2" />
+                            <span class="text-gray-700">+63</span>
+                        </div>
+                        <input type="text" name="phone" placeholder="123 456 7890" class="w-full p-3 outline-none rounded-r-lg" required />
+                    </div>
+                </div>
+
+                <!-- Email Input (Initially Hidden) -->
+                <div id="emailInput" class="mb-6 hidden">
+                    <div class="flex items-center border border-gray-300 rounded-lg">
+                        <input type="email" name="email" placeholder="Email" class="w-full p-3 outline-none rounded-lg" />
+                    </div>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="flex items-center mb-6">
+                    <input type="checkbox" name="recaptcha" class="h-5 w-5 text-blue-600 mr-2" />
+                    <span class="text-gray-600 text-sm">I'm not a robot</span>
+                    <div class="ml-auto flex items-center">
+                        <img src="recaptcha.png" alt="reCAPTCHA Logo" class="h-5 w-5 mr-1" />
+                        <span class="text-xs text-gray-500">reCAPTCHA</span>
+                    </div>
+                </div>
+                <div class="text-right mb-6">
+                    <a href="#" class="text-xs text-gray-500 hover:underline">Privacy - Terms</a>
+                </div>
+
+                <!-- Next Button -->
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700">
+                    Next
+                </button>
+            </form>
+
+            <!-- Help Link -->
+            <div class="text-right mt-4">
+                <a href="#" class="text-blue-600 text-sm hover:underline">Need help?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab Switching and Form Submission -->
+    <script>
+        function switchTab(tab) {
+            // Get tab buttons and input containers
+            const phoneTab = document.getElementById('phoneTab');
+            const emailTab = document.getElementById('emailTab');
+            const phoneInput = document.getElementById('phoneInput');
+            const emailInput = document.getElementById('emailInput');
+
+            // Reset styles and visibility
+            phoneTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            emailTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            phoneInput.classList.add('hidden');
+            emailInput.classList.add('hidden');
+
+            // Set active tab styles and show the correct input
+            if (tab === 'phone') {
+                phoneTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                phoneInput.classList.remove('hidden');
+            } else {
+                emailTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                emailInput.classList.remove('hidden');
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const form = document.getElementById('loginForm');
+            const formData = new FormData(form);
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const recaptcha = formData.get('recaptcha') ? 'Checked' : 'Not checked';
+
+            // Determine which input was used and show the appropriate alert
+            let message = `Form Submitted!\nreCAPTCHA: ${recaptcha}`;
+            if (phone) {
+                message += `\nPhone: +63${phone}`;
+            } else if (email) {
+                message += `\nEmail: ${email}`;
+            }
+
+            alert(message);
+
+            // Optionally reset the form
+            form.reset();
+            switchTab('phone'); // Reset to phone tab after submission
+        }
+    </script>
+</body>
+</html>
