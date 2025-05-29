@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: #1A2526;
+    color: #D5E7E1;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    padding: 20px 40px;
+  }
+
+
+  .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px; 
+      width: auto;
+    }
+
+
+  /* Main Section */
+  .main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  /* Left Promo Section */
+  .promo-section {
+    flex: 2;
+    min-width: 300px;
+    padding: 20px;
+  }
+
+  .advisory {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .advisory h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .advisory p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  .promo-content {
+    background: url('https://via.placeholder.com/600x300?text=Tent+Promo+Image') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .promo-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .promo-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+
+  .promo-content a {
+    color: #28A745;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .promo-content a:hover {
+    text-decoration: underline;
+  }
+
+  /* Right Login Section */
+  .login-section {
+    flexed: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+
+  .login-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .login-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .login-section .forgot-password {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .login-section .forgot-password a {
+    color: #28A745;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .login-section .forgot-password a:hover {
+    text-decoration: underline;
+  }
+
+  .login-section button {
+    width: 100%;
+    padding: 10px;
+    background: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  .login-section button:hover {
+    background: #218838;
+  }
+
+  .login-section .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .login-section .links a {
+    color: #28A745;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .login-section .links a:hover {
+    text-decoration: underline;
+  }
+
+  .login-section .links .register-btn {
+    background: #28A745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+
+  .login-section .links .register-btn:hover {
+    background: #218838;
+  }
