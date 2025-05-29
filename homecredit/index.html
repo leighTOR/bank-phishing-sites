@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div
+      class="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden"
+    >
+      <!-- Left Side: Image -->
+      <div class="w-full md:w-1/2">
+        <img
+          src="home-credit-img.webp"
+          alt="Person using phone"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <!-- Right Side: Login Form -->
+      <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+    
+       <!-- Logo Section Centered -->
+        <div class="flex flex-col items-center mb-6">
+            <img src="logo.png" class="w-24 h-8 object-contain mb-2" />
+           
+        </div>
+
+        <div class="mb-4 font-bold"> 
+            <a href="#" class="text-red-600   text-sm flex items-center">
+                <svg
+                    class="w-4 h-4 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                    ></path>
+                </svg>
+                Go Back to Homepage
+                </a>
+        </div>
+  
+        <h2 class="text-2xl font-semibold mb-2">Welcome Back!</h2>
+        <p class="text-gray-600 mb-6">
+          Log in to your account by filling in the details below.
+        </p>
+        <form id="loginForm" class="space-y-4" onsubmit="handleSubmit(event)">
+          <input
+            type="text"
+            name="accountNumber"
+            placeholder="Account Number"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            required
+          />
+          <input
+            type="text"
+            name="dateOfBirth"
+            placeholder="Date of Birth (MM/DD/YYYY)"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition"
+          >
+            Log In
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = {
+          accountNumber: formData.get("accountNumber"),
+          dateOfBirth: formData.get("dateOfBirth"),
+        };
+        console.log("Form submitted with:", data);
+        // Add your submission logic here (e.g., API call)
+        alert("Form submitted! Check console for details.");
+      }
+    </script>
+  </body>
+</html>
