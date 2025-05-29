@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LANDBANK iAccess Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header */
+      header {
+        background: #28a745;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container h1 {
+        color: white;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .logo-container span {
+        color: white;
+        font-size: 14px;
+        background: #d9534f;
+        padding: 2px 8px;
+        border-radius: 3px;
+      }
+
+      .iaccess-title {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      /* Navigation */
+      nav {
+        background: #333;
+        padding: 10px 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Main Content */
+      .main-content {
+        display: flex;
+        flex: 1;
+        padding: 20px;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+      }
+
+      /* Left Promo Section */
+      .promo-section {
+        flex: 2;
+        min-width: 300px;
+        padding: 20px;
+      }
+
+      .promo-section h2 {
+        color: #28a745;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .promo-image {
+        width: 100%; 
+        height: 300px; 
+        border-radius: 10px;
+        overflow: hidden; 
+        margin-bottom: 20px;
+      }
+      
+      .promo-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block; 
+      }
+
+      .promo-content h3 {
+        color: #28a745;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .promo-content ul {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .promo-content ul li {
+        margin: 10px 0;
+        font-size: 14px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .promo-content ul li::before {
+        content: "✔";
+        color: #28a745;
+        position: absolute;
+        left: 0;
+      }
+
+      .promo-content p {
+        font-size: 12px;
+        color: #666;
+      }
+
+      .promo-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .promo-footer img {
+        height: 40px;
+      }
+
+      .promo-footer p {
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* Right Login Section */
+      .login-section {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-section input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .login-section button {
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+
+      .login-section button:hover {
+        background: #218838;
+      }
+
+      .login-section a {
+        color: #28a745;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .login-section a:hover {
+        text-decoration: underline;
+      }
+
+      .login-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .login-links p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <h1>LANDBANK</h1>
+        <span>Overseas Filipino Bank</span>
+      </div>
+      <div class="iaccess-title">iAccess</div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#">About Us</a>
+      <a href="#">FAQs</a>
+      <a href="#">Security Policy</a>
+      <a href="#">Data Privacy Statement</a>
+      <a href="#">Advisory on ATM Use</a>
+      <a href="#">iAccess Features</a>
+      <a href="#">Find Us</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Promo Section -->
+      <div class="promo-section">
+        <h2>Welcome to iAccess!</h2>
+        <div class="promo-image">
+          <!-- Inside the promo-section -->
+          <div class="promo-image">
+            <img
+              src="login_advisory.jpg"
+              alt="Two people using a smartphone for LANDBANK iAccess promotion"
+            />
+          </div>
+        </div>
+        <div class="promo-content">
+          <h3>OPEN, PAY and WIN up to P1,000.00</h3>
+          <p>You may be one of the 75 lucky monthly raffle winners, if you:</p>
+          <ul>
+            <li>
+              OPEN a new account via the LANDBANK Mobile Banking App (MBA);
+            </li>
+            <li>
+              PAY at least one (1) bill via the MBA, iAccess, or Link.BizPortal
+              before the monthly cut-off period; and,
+            </li>
+            <li>WIN P1,000.00 cash for free.</li>
+          </ul>
+          <p>
+            Promo Period: March 1, 2020 to August 31, 2020<br />
+            * Visit the LANDBANK website for the full promo mechanics.<br />
+            DTI Fair Trade Permit No. FTEB 27504 Series of 2020.
+          </p>
+        </div>
+        <div class="promo-footer">
+          <img src="landbank.png" alt="LANDBANK Logo" />
+          <p>
+            Deposit are insured by PDIC up to P500,000 per depositor.<br />Member:
+            PDIC
+          </p>
+        </div>
+      </div>
+
+      <!-- Login Section -->
+      <div class="login-section">
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">LOGIN</button>
+        <div class="login-links">
+          <p><a href="#">Not yet enrolled? Sign up now!</a></p>
+          <p><a href="#">Click here to download enrollment form.</a></p>
+        </div>
+        <div class="login-links">
+          <p>
+            Upon login, I hereby agree to its
+            <a href="#">Terms and Conditions</a>.
+          </p>
+        </div>
+        <div class="login-links">
+          <p><a href="#">Unlock ID</a></p>
+          <p><a href="#">Forgot Password</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

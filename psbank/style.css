@@ -1,0 +1,198 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Login Section */
+  .login-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    background-color: white;
+  }
+  
+  /* Logo and headers */
+  .bank-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .bank-header .logo {
+    width: 180px;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .group {
+    margin: 0;
+    font-size: 12px;
+    color: #0066cc;
+    font-weight: bold;
+  }
+  
+  /* Form Section */
+  .login-form h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Password Eye Icon */
+  .password-group {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.3);
+  }
+  
+  .login-btn:hover {
+    background-color: #004a99;
+  }
+  
+  .login-btn:focus {
+    outline: none;
+  }
+  
+  /* Forgot password link */
+  .forgot-link {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .forgot-link a {
+    color: #0066cc;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .forgot-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Register section */
+  .register-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .register-section p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .register-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 6px;
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+  }
+  
+  .register-link:hover {
+    background-color: #e6f0ff;
+  }
+  
+  /* Image Section */
+  .image-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .login-section,
+    .image-section {
+      width: 100%;
+      height: auto;
+    }
+  
+    .image-section {
+      display: none;
+    }
+  }
+  
