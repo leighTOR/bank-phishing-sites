@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDAX | Cryptocurrency Trading Platform in the Philippines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen relative">
+
+  <!-- Logo -->
+  <div class="absolute top-6 left-6">
+    <img src="pdax.png" alt="PDAX Logo" class="w-12 h-auto">
+  </div>
+
+  <!-- Main Container -->
+  <div class="bg-white shadow-md rounded-lg flex w-full max-w-5xl mx-4">
+    
+    <!-- Login Form -->
+    <div class="w-1/2 p-8">
+      <h1 class="text-2xl font-semibold mb-6">Log in</h1>
+      <form id="loginForm" class="space-y-4">
+        <input type="email" placeholder="Email Address" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+        <input type="password" placeholder="Password" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+        
+        <a href="#" class="text-green-600 text-sm block hover:underline">
+          Need help logging in? Click here to unlock your account or Reset Password
+        </a>
+        
+        <button type="button" onclick="handleLogin()" 
+                class="w-full py-2 rounded-md bg-gray-300 hover:bg-gray-400 transition-colors login-btn text-white font-semibold">
+          Login
+        </button>
+      </form>
+      <p class="mt-4">
+        <a href="#" class="text-green-600 hover:underline">Not yet registered? Create an account</a>
+      </p>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="w-1/2 p-8 bg-gray-50 rounded-r-lg">
+      <h1 class="text-2xl font-semibold mb-4">FAQ</h1>
+      <ul class="space-y-2 text-green-600">
+        <li><a href="#" class="hover:underline">What should I do if I forget my password?</a></li>
+        <li><a href="#" class="hover:underline">How do I unlock my account?</a></li>
+        <li><a href="#" class="hover:underline">How do I change my password?</a></li>
+        <li><a href="#" class="hover:underline">Why did I get a notification about a login attempt?</a></li>
+        <li><a href="#" class="hover:underline">How do I keep my account secure?</a></li>
+      </ul>
+      <p class="mt-4 text-sm text-gray-700">
+        If you continue to encounter this error, please contact our Customer Support here.
+      </p>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script>
+    const form = document.getElementById('loginForm');
+    const emailInput = form.querySelector('input[type="email"]');
+    const passwordInput = form.querySelector('input[type="password"]');
+    const loginBtn = form.querySelector('button');
+
+    function updateButtonState() {
+      if (emailInput.value && passwordInput.value) {
+        loginBtn.classList.remove("bg-gray-300");
+        loginBtn.classList.add("bg-green-500");
+      } else {
+        loginBtn.classList.remove("bg-green-500");
+        loginBtn.classList.add("bg-gray-300");
+      }
+    }
+
+    emailInput.addEventListener('input', updateButtonState);
+    passwordInput.addEventListener('input', updateButtonState);
+
+    function handleLogin() {
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      if (email && password) {
+        console.log('Login submitted:', { email, password });
+        // Send to server logic here
+      } else {
+        alert('Please fill in both email and password fields.');
+      }
+    }
+  </script>
+</body>
+</html>
